@@ -1,0 +1,89 @@
+.electro__product{
+    background-image: url('../img/electro__product.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.electro__title{
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41px;
+    color: #EAEAEA;
+    padding-top: 100px;
+    padding-bottom: 300px;
+    text-align: center;
+}
+.electro__blocks{
+    display: flex;
+    gap: 40px;
+    margin-top: 450px;
+    padding-bottom: 5px;
+}
+
+.electro__block{
+    width: 50%;
+    padding: 70px 38px 50px 38px;
+    background: #F8FBFF;
+    box-shadow: 0px 8px 20px rgba(36, 51, 108, 0.12);
+    border-radius: 12px;
+}
+
+
+.electro__text{
+    font-family: 'Overpass';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+color: #222222;
+padding-bottom: 20px;
+}
+
+.electro__text:last-child{
+    padding-bottom: 2px;
+}
+@media screen and (max-width: 1850px) {
+    .electro__blocks{
+        display: flex;
+        gap: 40px;
+        margin-top: 160px;
+        padding-bottom: 5px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .electro__product{
+        background-image: url('../img/electro__product.png');
+        background-repeat: no-repeat;
+        text-align: center;
+        background-size: 300%;
+    }
+    .electro__blocks{
+        flex-flow: column wrap;
+    }
+    .electro__block{
+        width: 80%;
+        margin-left: 30px;
+        
+    }
+}
+@media screen and (max-width: 430px) {
+    .electro__blocks{
+        flex-flow: column wrap;
+    }
+    .electro__block{
+        width: 70%;
+        margin-left: 30px;
+        
+    }
+}
+@media screen and (max-width: 380px) {
+    .electro__blocks{
+        flex-flow: column wrap;
+    }
+    .electro__block{
+        width: 70%;
+        margin-left: 20px;
+        
+    }
+}

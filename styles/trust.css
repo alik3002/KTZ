@@ -1,0 +1,121 @@
+.trust{
+    text-align: center;
+}
+.partners{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 80px;
+}
+
+.partners__title{
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41px;
+    color: #222222;
+    padding-top: 180px;
+    padding-bottom: 52px;
+    text-align: center;
+}
+
+.partners__bg{
+    max-width: 25%;
+    background: #F8FBFF;
+    box-shadow: 0px 8px 20px rgba(36, 51, 108, 0.1);
+    border-radius: 12px;
+   
+    padding: 10px 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .partners__title{
+        text-align: center;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .partners{
+        flex-flow: wrap;
+        width: 80%;
+         align-items: center;
+         margin-left: 60px;
+        
+    }
+    .partners__bg{
+        max-width: 80%;
+
+    }
+    .partners__img{
+        width: 100%;
+    }
+  }
+  @media screen and (max-width: 430px) {
+    .partners__title{
+        text-align: center;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .partners{
+        flex-flow: wrap;
+        width: 100%;
+        align-items: center;
+        margin-left: 80px;
+        
+    }
+    .partners__bg{
+        max-width: 80%;
+        margin-bottom: 30px;
+
+    }
+    .partners__img{
+        width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    
+
+    .partners__title{
+        text-align: center;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .partners{
+        flex-flow: wrap;
+        width: 100%;
+        align-items: center;
+        margin-left: 40px;
+    }
+    .partners__bg{
+        max-width: 80%;
+        margin-bottom: 30px;
+
+    }
+    .partners__img{
+        width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+
+    .partners__title{
+        text-align: center;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .partners{
+        flex-flow: wrap;
+        width: 80%;
+        align-items: center;
+        margin-left: 40px;
+    }
+    .partners__bg{
+        max-width: 80%;
+        margin-bottom: 30px;
+
+    }
+    .partners__img{
+        width: 100%;
+    }
+  }

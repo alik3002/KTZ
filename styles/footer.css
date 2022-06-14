@@ -1,0 +1,67 @@
+.footer__list{
+    display: flex;
+    gap: 40px;
+    padding-bottom: 20px;
+}
+
+.footer__content{
+    align-items: center;
+    display: flex;
+    gap: 250px;
+}
+
+.footer__item{
+    font-family: 'Overpass';
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 23px;
+/* identical to box height */
+
+
+color: #222222;
+    text-decoration: none;
+}
+
+.footer__text{
+    font-family: 'Overpass';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+    .footer__right{
+        margin-top: 50px;
+    }
+    .footer__content{
+        flex-flow: column nowrap;
+        max-width: 100%;
+        align-items: center;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .footer__list{
+        max-width: 100%;
+        margin-top: 10px;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    .footer__right{
+        margin-top: 50px;
+    }
+    .footer__content{
+        flex-flow: column nowrap;
+        max-width: 95%;
+        align-items: center;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .footer__list{
+        max-width: 100%;
+        margin-top: 10px;
+        flex-flow: column nowrap;
+        list-style: none;
+    }
+  }

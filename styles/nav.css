@@ -1,0 +1,144 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.header__logo{
+  width: 200px;
+  height: 200px;
+}
+
+.header__content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middle__nav{
+  display: flex;
+  gap: 40px;
+}
+
+.right__nav{
+  display: flex;
+  gap: 16px;
+}
+
+.right__nav{
+  align-items: center;
+}
+
+.nav__item{
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 23px;
+  color: #222222;
+  text-decoration: none;
+}
+
+.burger{
+  display: none;
+}
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FFFFFFCC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0 0;
+}
+.menu-item{
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu-nav li{
+  margin-bottom: 40px;
+  list-style: none;
+}
+.menu-lang{
+  display: flex;
+}
+.menu-lang li{
+  margin: 0;
+  margin-right: 10px;
+}
+.burger-closed{
+  display: block;
+  position: absolute;
+  overflow-x: clip;
+  top: 30px;
+  right: 20px;
+}
+.burger-closed-btn{
+  display: block;
+  background: #000;
+  width: 24px;
+  height: 2px;
+  position: relative;
+  overflow-x: clip;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.burger-closed-btn::before{
+  content: "";
+  background: #000;
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  transform: rotate(-90deg);
+}
+@media (max-width: 768px) {
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  .header__logo{
+    width: 171px;
+    height: 125px;
+  }
+  
+  .middle__nav{
+    display: none;
+  }
+  
+  .right__nav{
+    display: none;
+  }
+  .burger{
+    display: block;
+    background: #000;
+    width: 24px;
+    height: 2px;
+    position: relative;
+    overflow-x: clip;
+    margin-right: 25px;
+    cursor: pointer;
+  }
+  .burger::before, .burger::after{
+    content: "";
+    background: #000;
+    width: 24px;
+    height: 2px;
+    position: absolute;
+  }
+  .burger::before{
+    top: -8px;
+  }
+  .burger::after{
+    bottom: -8px;
+  }
+}
+

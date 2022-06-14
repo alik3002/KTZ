@@ -1,0 +1,26 @@
+.popupslider-item{
+    height: 100%;
+    width: 100%;
+    max-width: 210px;
+    background-color: gainsboro;
+    margin-right: 20px;
+    border-radius: 12px;
+}
+.popupslider-item img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.popupslider-item-text{
+    font-size: 18px;
+    align-items: center;
+    font-family: 'Overpass';
+    padding-top: 78px;
+    padding-left: 20px;
+}
+.popupslider{
+    display: flex;
+    margin-right: 20px;
+    padding-bottom: 50px;
+    width: 100%;
+}

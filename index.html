@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KTZ</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('5w96FWMwQ1fYL78UX');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_8rf4mpo', 'template_d5xfffa', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                        const modal2 = document.querySelector(".modal-window")
+                        if(modal2.style.display === "flex"){
+                            modal2.style.display = "none"
+                        }
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <img class="header__logo" src="./img/header__logo.svg" alt="" />
+
+                <div class="header__middle-nav">
+                    <ul class="middle__nav">
+                        <li><a class="nav__item" href="#production">Продукция</a></li>
+                        <li>
+                            <a class="nav__item" href="#trust__id">Нам доверяют</a>
+                        </li>
+                        <li><a class="nav__item" href="#contacts__id">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="header__right-nav">
+                    <ul class="right__nav">
+                        <li><a class="nav__item" href="">RU</a></li>
+                        <li><a class="nav__item" href="">KG</a></li>
+                        <li><a class="nav__item" href="">EN</a></li>
+                    </ul>
+                </div>
+                <div class="burger"></div>
+            </div>
+        </div>
+        <div class="menu" style="display: none;">
+            <div class="menu-middle-nav">
+                <ul class="menu-nav">
+                    <li><a class="menu-item" href="#production">Продукция</a></li>
+                    <li>
+                        <a class="menu-item" href="#trust__id">Нам доверяют</a>
+                    </li>
+                    <li><a class="menu-item" href="#contacts__id">Контакты</a></li>
+                </ul>
+                <ul class="menu-lang">
+                    <li><a class="menu-item" href="#">RU</a></li>
+                    <li><a class="menu-item" href="#">KG</a></li>
+                    <li><a class="menu-item" href="#">EN</a></li>
+                </ul>
+            </div>
+            <div class="burger-closed">
+                <div class="burger-closed-btn"></div>
+            </div>
+        </div>
+    </header>
+    <section class="header1">
+        <div class="modal-window-closed"></div>
+        <div class="modal-window" style="display: none">
+            <form id="contact-form" style="width: 100%;">
+                <h2 class="modal-window-h2">Обратная связь</h2>
+                <input class="modal-window-input" placeholder="Имя" type="text" name="user_name" />
+                <input class="modal-window-input" placeholder="Номер телефона" type="text" name="contact_number"/>
+                <input class="modal-window-input" placeholder="Email" type="text" name="user_email" />
+                <textarea class="modal-window-input-2" placeholder="Сообщение" name="message"></textarea>
+                <button class="modal-button" type="submit">Отправить</button>
+            </form>
+        </div>
+        <div class="sec-1-title">
+            <div>
+                <h1 class="sec-1-title-h1">
+                    Мы соответствуем международным стандартам имеем
+                    уникальные технологии и опыт
+                </h1>
+                <p class="sec-1-title-p">
+                    Мы несем энергию, тепло и свет в ваши дома
+                </p>
+            </div>
+            <div>
+                <button class="button-1" id="button-1">
+                    Связаться <br />
+                    с <br />
+                    директором
+                </button>
+            </div>
+        </div>
+
+        <div class="slider">
+            <div class="slider-item">
+                <img src="./src/images/banner.png" alt="" />
+            </div>
+            <div class="slider-item">
+                <img src="./src/images/banner(1).png" alt="" />
+            </div>
+            <div class="slider-item">
+                <img src="./src/images/wpapers_ru_Ветряная-электростанция.jpg" alt="" />
+            </div>
+        </div>
+    </section>
+    <main>
+        <section class="Benefits">
+            <div class="container">
+                <div class="blocks">
+                    <div class="block">
+                        <img class="benefits__img" src="./img/1.svg" alt="" />
+                        <h3 class="benefits__title">Надежность</h3>
+                        <p class="benefits__text">
+                            Собственные конструкторско-технологические,
+                            производственные, исследовательские,
+                            испытательные и экспериментальные базы по данной
+                            области техники, позволяющие внедрять в
+                            конструкции изделий современные решения и
+                            материалы. Использование специального
+                            технологического оборудования высшего класса от
+                            фирм с мировой известностью: "ALSTOM", "GEORG",
+                            «YASKAWA Electric" "LVD"
+                        </p>
+                    </div>
+                    <div class="block">
+                        <img class="benefits__img" src="./img/2.svg" alt="" />
+                        <h3 class="benefits__title">Опыт</h3>
+                        <p class="benefits__text">
+                            Современная производственная база, уникальные
+                            технологии, высокий уровень конструкторских
+                            разработок, более чем 60-летний опыт
+                            производства, стабильность трудового коллектива
+                            позволяют обеспечить выполнение требований
+                            заказчика как в отношении конструкции, так и в
+                            отношении климатического исполнения изделий.
+                            Оборудование имеет допуск для поставки на
+                            атомные электростанции
+                        </p>
+                    </div>
+                    <div class="block">
+                        <img class="benefits__img" src="./img/3.svg" alt="" />
+                        <h3 class="benefits__title">Качество</h3>
+                        <p class="benefits__text">
+                            Система менеджмента качества проектирования,
+                            система управления окружающей средой и система
+                            управления охраной труда сертифицирована
+                            международным органом по сертификации - "DEKRA",
+                            Германия и национальным органом по сертификации
+                            - БелГИСС - на соответствие ISO 9001-2015, ISO
+                            14001-2015, СТБ ИСО/МЭК-17 025-2007 и СТБ
+                            18001-2009. Силовые трансформаторы соответствуют
+                            международным стандартам.
+                        </p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+        <section id="production" class="electro__product">
+            <h3 class="electro__title">Электрическая Продукция</h3>
+            <div class="container">
+                <div class="popupslider">
+
+                    <div id="trans-1" class="popupslider-item">
+                       <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Трансформаторы силовые масляные</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Трансформаторы силовые сухие</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">КТП наружной установки</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">КТП внутренней установки и НКУ</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">КТП в железобетонной монолитной оболочке</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">КТП в утепленной оболочке</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Аппараты</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Дизельные электростанции в железобетонной оболочке</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Энергосберегающее оборудование</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Многоцелевые трансформаторы</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Трансформаторы тока</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Установки катодной защиты</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Автоматические конденсаторные установки АКУ</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Запасные части к силовым масляным трансформаторам</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                    <div class="popupslider-item">
+                        <p style="position: absolute; max-width: 177px; max-height: 108px; width: 110%; height: 100%;" class="popupslider-item-text">Руководства по эксплуатации</p>
+                        <img src="./img/callum-shaw-bECXV0LLW5c-unsplash 1.png" alt="" />
+                    </div>
+                </div>
+
+
+                <div class="trans-1-title">
+                    <div class="trans-1-slider">
+                        <div class="trans-1-slide">
+                            <img src="./img/tmg-400-35.jpg" alt="">
+                        </div>
+
+                        <div class="trans-1-slide">
+                            <img src="./img/tmg-2.jpg" alt="">
+                        </div>
+
+                        <div class="trans-1-slide">
+                            <img src="./img/tmg-3.jpg" alt="">
+                        </div>
+
+                        <div class="trans-1-slide">
+                            <img src="./img/tmg-4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="trust__id" ]class="trust">
+            <div class="container">
+                <h3 class="partners__title">Нам доверяют</h3>
+                <div class="partners">
+                    <div class="partners__bg">
+                        <img class="partners__img" src="./img/8-gazprom-neft-1.png" alt="" />
+                    </div>
+                    <div class="partners__bg">
+                        <img class="partners__img" src="./img/2-lukoil-1.png" alt="" />
+                    </div>
+                    <div class="partners__bg">
+                        <img class="partners__img" src="./img/7-sibneft-1.png" alt="" />
+                    </div>
+                    <div class="partners__bg">
+                        <img class="partners__img" src="./img/9-schlumberger-1.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacts__id" class="contacts">
+            <div class="container contacts__center">
+                <h3 class="contacts__title">Контакты</h3>
+                <div class="contacts__content">
+                    <div class="contacts__left">
+                        <div class="contact__adress">
+                            <img src="./img/MapPin.svg" alt="" />
+                            <div class="contact__text">
+                                Кыргызская Республика, г.Бишкек, ул.
+                                Советского 165
+                            </div>
+                        </div>
+                        <div class="contact__number">
+                            <img src="./img/Phone.svg" alt="" />
+                            <div class="contact__text">
+                                +996 777 777 777
+                            </div>
+                        </div>
+                        <div class="contact__email">
+                            <img src="./img/Envelope.svg" alt="" />
+                            <div class="contact__text">
+                                example@example.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__right">
+                        <img class="contacts__right-img" src="./img/contacts.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__right">
+                    <img class="header__logo" src="./img/header__logo.svg" alt="" />
+                </div>
+                <div>
+                    <ul class="footer__list">
+                        <li>
+                            <a class="footer__item" href="#production">Продукция</a>
+                        </li>
+                        <li>
+                            <a class="footer__item" href="#trust__id">Нам доверяют</a>
+                        </li>
+                        <li>
+                            <a class="footer__item" href="#contacts__id">Контакты</a>
+                        </li>
+                    </ul>
+                    <p class="footer__text">
+                        Copyright © 2022 Все права защищены
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/slick.min.js"></script>
+<script src="../js/index.js"></script>
+
+</html>

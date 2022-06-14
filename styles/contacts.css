@@ -1,0 +1,77 @@
+.contacts__content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 52px;
+}
+
+.contacts{
+    background-color: #24336C;
+}
+
+.contacts__title{
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41px;
+    color: #EAEAEA;
+    padding-top: 100px;
+}
+
+.contact__adress, .contact__number, .contact__email{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.contact__adress{
+    padding-top: 80px;
+}
+
+.contacts__center{
+    text-align: center;
+}
+
+.contact__text{
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #EAEAEA;
+}
+
+.contacts__right-img{
+    width: 590px;
+    height: 320px;
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .contacts__content{
+        flex-flow: column nowrap;
+        width: 80%;
+        align-items: center;
+        padding-bottom: 70px;
+        margin-left: 30px;
+        text-align: center;
+    }
+    .contact__left{
+        max-width: 90%;
+        
+    }
+    .contact__adress{
+        padding-left: 50px;
+    }
+    .contact__number{
+        text-align: center;
+        padding-left: 50px;
+    }
+    .contact__email{
+        padding-left: 50px;
+    }
+    .contacts__right{
+       display: none;
+    }
+  }
